@@ -8,6 +8,13 @@ const powerDisplay = document.getElementById("power");
 const upgrade1 = document.getElementById("upgrade1");
 const upgrade2 = document.getElementById("upgrade2");
 const upgrade3 = document.getElementById("upgrade3");
+const selector = document.getElementById("chooseDino");
+
+
+selector.addEventListener("change", () => {
+  dino.src = selector.value;
+});
+
 
 dino.addEventListener("click", () => {
   score += power;
@@ -59,3 +66,16 @@ function buyUpgrade(cost, powerBoost) {
 if (score >= 1000) {
   alert("your love can withstand any extinction ❤️");
 }
+
+selector.addEventListener("change", () => {
+  dino.src = selector.value;
+  localStorage.setItem("selectedDino", selector.value);
+});
+
+window.addEventListener("load", () => {
+  const saved = localStorage.getItem("selectedDino");
+  if (saved) {
+    dino.src = saved;
+    selector.value = saved;
+  }
+});

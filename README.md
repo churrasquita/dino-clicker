@@ -1,2 +1,3 @@
 # dino
-dino juego cumplemesesinbombin
+dino clicker para mi dinotea
+

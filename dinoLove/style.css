@@ -50,3 +50,16 @@ button:hover {
   color: #ff3b6f;
   font-weight: bold;
 }
+
+.selector {
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 6px;
+  border-radius: 10px;
+  font-family: inherit; 
+  background-color: #ffe6ea;
+  border: 2px solid #ff8da1;
+  color: #ff4f67;
+}
